@@ -16,11 +16,11 @@ The update chain below assumes that `httpd` is installed; since it wasn't on my 
 
 Ensure that the VM is connected to the Network, and issue the following:
 
-    `$ sudo dnf update`
-    `$ sudo dnf update httpd`
-    `$ sudo yum check-update`
-    `$ sudo yum update`
-    `$ sudo yum update httpd`
+    $ sudo dnf update
+    $ sudo dnf update httpd
+    $ sudo yum check-update
+    $ sudo yum update
+    $ sudo yum update httpd
 
 
 
