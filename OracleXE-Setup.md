@@ -30,22 +30,36 @@ Logged into Linux, navigate to Oracle's downloads page for XE: [https://www.orac
 
 This will download a .rpm file; it would be sensible to verify the checksum:
 
+    $ sha256sum {filename}
+
+_Hint: Use tab for filename completion_
+
+
+### Forewarned is Forearmed
+
+During the installation process, we'll be asked to set a couple of passwords; good practice would be to use strong, distinct passwords, but do bear in mind that Oracle has issues with certain characters in passwords, such as the `@` symbol.
+
+You will need to create passwords for `SYS` and `SYSTEM` accounts, so be prepared for this step during installation.
+
 
 ### Install the RPM
 
-The .rpm will probably have been saved to the Downloads folder: Right Click and Select _Open with Software Install..._
+We're going to install XE from the command line, rather than using Software Center.
+
+I'm actually `su`-ing to root, here (root password prompt not shown).
+
+    $ cd ~/Downloads
+    $ su -
+    # rpm -ivh {rpm filename}
+
+When prompted, run the following command (note: still `su`-ing as `root`:
+
+    # /etc/init.d/oracle-xe-21c configure
+
+Once the installation script has completed, remember to `exit` from the `su` root account!
 
 
-### Reboot, Update, Reboot
+### Reboot the Machine
 
-This is paranoia talking, but having installed the RPM, reboot, check for updates and, if any, reboot again.
-
-
-
-
-
-
-
-
-
+Assuming that you set the database to start automatically on reboot, XE should now be up and running.
 
