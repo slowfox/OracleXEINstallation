@@ -4,7 +4,7 @@
 
 This guide assumes that you have installed Oracle Linux 8, as available from Oracle here: [https://yum.oracle.com/oracle-linux-isos.html](https://yum.oracle.com/oracle-linux-isos.html).
 
-This guide was written using VMWare Workstation 17 Player under Windows 11.
+This guide was written using VMWare Workstation 17 Player under Windows 11, under the usual _It Works For Me_ guarantee.
 
 
 ### Initial boot
@@ -50,9 +50,9 @@ I'm actually `su`-ing to root, here (root password prompt not shown).
 
     $ cd ~/Downloads
     $ su -
-    # rpm -ivh {rpm filename}
+    # rpm -ivh {rpm-filename}
 
-When prompted, run the following command (note: still `su`-ing as `root`:
+When prompted, run the following command (note: still `su`-ing as `root`):
 
     # /etc/init.d/oracle-xe-21c configure
 
